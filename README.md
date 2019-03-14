@@ -2,7 +2,7 @@
 Python3 HTTP/HTTPS协议文件多线程下载模块
 
 使用方法：
-'''
+```
 import downloader
 #url=下载链接, local=本地文件名, threadnumber=线程数(默认4), downnow=是否立即下载(默认否), headers=header定义(默认{'user-agent': 'PyDownloader/1.0'})
 download = downloader.downloader(url='downloadurl', local='local file name')
@@ -16,4 +16,4 @@ if download.startDownload():
 
 #download.canDownload 为bool值显示当前url是否可下载
 #download.isSave 为bool值显示是否保存
-'''
+```
