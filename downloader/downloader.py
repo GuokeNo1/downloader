@@ -17,6 +17,7 @@ class downloader:
         else:
             self.local = local
         urllib3.disable_warnings()
+        self.isSave = False
         if downnow:
             self.startDownload()
 
@@ -69,6 +70,7 @@ class downloader:
             for t in self.threads:
                 save.seek(int(int(self.length)/len(self.threads))*int(t['id']))
                 save.write(t['data'])
+        self.isSave = True
 
     def __head(self):
         http = urllib3.PoolManager()
